@@ -1,5 +1,8 @@
 package com.skylight.lonelydark;
 
+import com.skylight.lonelydark.block.ModBlocks;
+import com.skylight.lonelydark.item.ModItemGroups;
+import com.skylight.lonelydark.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +22,9 @@ public class LonelydarkMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
+		ModItems.registerItems();
+		ModItemGroups.registerGroups();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }
